@@ -1,25 +1,9 @@
 <template>
 	<view>
 		<!-- <cu-custom bgColor="bg-gradual-pink" :isBack="true"><block slot="backText">返回</block><block slot="content">操作条</block></cu-custom> -->
-		
-		<cu-custom class="cu-bar search bg-gradual-blue" >
-			<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big91012.jpg);"></view>
-			<block slot="content">
-				颖超教育
-			</block>
-			<view class="action">
-				<text class="cuIcon-more"></text>
-			</view>
+		<cu-custom bgColor="bg-gradual-blue" >
+			<block slot="content">颖超教育</block>
 		</cu-custom>
-		<view class="cu-bar bg-blue search ">
-			<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big91012.jpg);"></view>
-			<view class="content">
-				颖超教育
-			</view>
-			<view class="action">
-				<text class="cuIcon-more"></text>
-			</view>
-		</view>
 		<swiper class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
 		 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
 		 indicator-active-color="#0081ff">
@@ -30,7 +14,7 @@
 				</view>
 			</swiper-item>
 		</swiper>
-		<view class="cu-bar bg-white solid-bottom">
+		<view class="cu-bar bg-white solid-bottom margin-top">
 			<view class="action">
 				<text class="cuIcon-title text-orange "></text> 宫格列表
 			</view>
@@ -63,7 +47,7 @@
 			</view>
 		</view>
 		<view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
-			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
+			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*3">
 				<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]">
 					<view class="cu-tag badge" v-if="item.badge!=0">
 						<block v-if="item.badge!=1">{{item.badge>99?'99+':item.badge}}</block>
@@ -72,8 +56,78 @@
 				<text>{{item.name}}</text>
 			</view>
 		</view>
+		<view class="cu-card case" :class="isCard?'no-card':''">
+			<view class="cu-item shadow">
+				<view class="image">
+					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+					 mode="widthFix"></image>
+					<view class="cu-tag bg-blue">史诗</view>
+					<view class="cu-bar bg-shadeBottom"> <text class="text-cut">我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。</text></view>
+				</view>
+				<view class="cu-list menu-avatar">
+					<view class="cu-item">
+						<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+						<view class="content flex-sub">
+							<view class="text-grey">正义天使 凯尔</view>
+							<view class="text-gray text-sm flex justify-between">
+								十天前
+								<view class="text-gray text-sm">
+									<text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+									<text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+									<text class="cuIcon-messagefill margin-lr-xs"></text> 30
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="cu-card article" :class="isCard?'no-card':''">
+			<view class="cu-item shadow">
+				<view class="title"><view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view></view>
+				<view class="content">
+					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+					 mode="aspectFill"></image>
+					<view class="desc">
+						<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+						<view>
+							<view class="cu-tag bg-red light sm round">正义天使</view>
+							<view class="cu-tag bg-green light sm round">史诗</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="cu-item shadow">
+				<view class="title"><view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view></view>
+				<view class="content">
+					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+					 mode="aspectFill"></image>
+					<view class="desc">
+						<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+						<view>
+							<view class="cu-tag bg-red light sm round">正义天使</view>
+							<view class="cu-tag bg-green light sm round">史诗</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="cu-item shadow">
+				<view class="title"><view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view></view>
+				<view class="content">
+					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+					 mode="aspectFill"></image>
+					<view class="desc">
+						<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+						<view>
+							<view class="cu-tag bg-red light sm round">正义天使</view>
+							<view class="cu-tag bg-green light sm round">史诗</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
 		
-		
+		<view class="cu-tabbar-height"></view>
 		<view class="cu-bar tabbar bg-white foot">
 			<view class="action text-orange">
 				<view class="cuIcon-homefill"></view> 首页
@@ -81,12 +135,12 @@
 			<view class="action text-gray">
 				<view class="cuIcon-similar"></view> 学习
 			</view>
-			<view class="action text-gray" @click="toDeail()">
+			<navigator class="action text-gray" url="../index/index">
 				<view class="cuIcon-recharge" >
 					<view class="cu-tag badge">99</view>
 				</view>
 				圈子
-			</view >
+			</navigator >
 			<view class="action text-gray">
 				<view class="cuIcon-my">
 					<view class="cu-tag badge"></view>
@@ -186,9 +240,19 @@
 					color: 'mauve',
 					badge: 0,
 					name: '版权'
+				}, {
+					cuIcon: 'commandfill',
+					color: 'purple',
+					badge: 0,
+					name: '问答'
+				}, {
+					cuIcon: 'brandfill',
+					color: 'mauve',
+					badge: 0,
+					name: '更多'
 				}],
 				modalName: null,
-				gridCol: 5,
+				gridCol: 3,
 				gridBorder: false,
 				menuBorder: false,
 				menuArrow: false,
@@ -197,6 +261,7 @@
 				listTouchStart: 0,
 				listTouchDirection: null,
 				
+				isCard: false
 			};
 		},
 		onLoad() {
@@ -306,7 +371,10 @@
 					this.modalName = null
 				}
 				this.listTouchDirection = null
-			}
+			},
+			IsCard(e) {
+				this.isCard = e.detail.value
+			},
 		}
 	} 
 </script>

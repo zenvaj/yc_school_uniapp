@@ -1,6 +1,9 @@
 <template>
 	<view>
-		<cu-custom bgColor="bg-gradual-blue" :isBack="true"><block slot="backText">返回</block><block slot="content">头像</block></cu-custom>
+		<cu-custom bgColor="bg-gradual-blue" :isBack="true">
+			<block slot="backText">返回</block>
+			<block slot="content">头像</block>
+		</cu-custom>
 		<view class="cu-bar bg-white">
 			<view class="action">
 				<text class="cuIcon-title text-blue"></text>头像形状

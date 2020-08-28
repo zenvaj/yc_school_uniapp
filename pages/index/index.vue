@@ -22,9 +22,13 @@
 				</view>
 				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
 			</view>
+			<navigator class="action text-gray" url="../yingchao/index">
+				<view class="cuIcon-recharge"></view> 颖超教育
+			</navigator>
 			<view class="action text-gray" @click="toDeail">
 				<view class="cuIcon-recharge"></view> 颖超教育
-			</view> 
+			</view>
+			
 		</view>
 	</view>
 </template>
@@ -32,7 +36,7 @@
 <script>
 	export default {
 		data() {
-		return {
+			return {
 				PageCur: 'basics'
 			}
 		},
@@ -41,7 +45,10 @@
 				this.PageCur = e.currentTarget.dataset.cur
 			},
 			toDeail: function(e) {
-			   this.$router.push("/pages/yingchao/index")
+			   //在起始页面跳转到test.vue页面并传递参数
+			   uni.navigateTo({
+			       url: '../yingchao/index'
+			   });
 			 }
 		}
 	}
