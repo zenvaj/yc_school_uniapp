@@ -24,7 +24,7 @@
 			</view>
 			<view class="action text-gray" @click="toDeail">
 				<view class="cuIcon-recharge"></view> 颖超教育
-			</view>
+			</view> 
 		</view>
 	</view>
 </template>

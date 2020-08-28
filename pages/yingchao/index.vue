@@ -308,7 +308,7 @@
 				this.listTouchDirection = null
 			}
 		}
-	}
+	} 
 </script>
 
 <style>
