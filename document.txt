@@ -1,0 +1,2 @@
+https://github.com/zenvaj/yc_school_uniapp.git
+git@github.com:zenvaj/yc_school_uniapp.git
