@@ -22,6 +22,9 @@
 				</view>
 				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
 			</view>
+			<view class="action text-gray" @click="toDeail">
+				<view class="cuIcon-recharge"></view> 颖超教育
+			</view>
 		</view>
 	</view>
 </template>
@@ -36,7 +39,10 @@
 		methods: {
 			NavChange: function(e) {
 				this.PageCur = e.currentTarget.dataset.cur
-			}
+			},
+			toDeail: function(e) {
+			   this.$router.push("/pages/yingchao/index")
+			 }
 		}
 	}
 </script>

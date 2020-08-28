@@ -1,0 +1,45 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "touristappid",
+  "projectname": "学习测试1",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 1,
+      "list": [
+        {
+          "name": "表单",
+          "query": "",
+          "id": 0,
+          "pathName": "pages/component/form"
+        },
+        {
+          "id": 1,
+          "name": "pages/yingchao/index",
+          "pathName": "pages/yingchao/index",
+          "query": ""
+        }
+      ]
+    }
+  }
+}
