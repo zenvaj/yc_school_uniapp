@@ -2,7 +2,7 @@
 	<view>
 		<!-- <cu-custom bgColor="bg-gradual-pink" :isBack="true"><block slot="backText">返回</block><block slot="content">操作条</block></cu-custom> -->
 		<cu-custom bgColor="bg-gradual-blue" >
-			<block slot="content">颖超教育</block>
+			<block slot="content">颖超教育Iris</block>
 		</cu-custom>
 		<swiper class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
 		 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"

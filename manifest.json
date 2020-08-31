@@ -2,7 +2,7 @@
     "name" : "学习测试1",
     "appid" : "__UNI__6CFEE0E",
     "description" : "",
-    "versionName" : "ColorUi for UniApp 2.1.4",
+    "versionName" : "yc_school",
     "versionCode" : 214,
     "transformPx" : false,
     "app-plus" : {
@@ -55,7 +55,14 @@
         }
     },
     "h5" : {
-        "title" : "ColorUi for UniApp",
-        "domain" : "demo.color-ui.com"
+        "title" : "yc_school",
+        "domain" : "demo.color-ui.com",
+        "router" : {
+            "mode" : "hash",
+            "base" : "./"
+        },
+        "devServer" : {
+            "https" : true
+        }
     }
 }
